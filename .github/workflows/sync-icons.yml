@@ -24,7 +24,7 @@ jobs:
         run: |
           python - <<'PY'
           from pathlib import Path
-          import json, urllib.request, datetime
+          import json, urllib.request, datetime, base64
           from PIL import Image, ImageOps, ImageFile
           ImageFile.LOAD_TRUNCATED_IMAGES = True
 
