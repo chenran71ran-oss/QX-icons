@@ -1,7 +1,7 @@
 {
   "source": "Apple iTunes Lookup API",
   "country": "us",
-  "synced_at": "2026-09-22T05:31:33.064279+00:00",
+  "synced_at": "2026-09-22T09:01:30.112445+00:00",
   "apps": {
     "ChatGPT": {
       "trackId": 6448311069,
@@ -31,9 +31,9 @@
       "trackId": 284815942,
       "trackName": "Google",
       "sellerName": "Google LLC",
-      "version": "438.6",
-      "currentVersionReleaseDate": "2026-09-16T00:14:45Z",
-      "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/79/79/af/7979af5c-30a8-e3fd-3d08-b5aedb8637fa/SuperG_ios26-0-0-1x_U007epad-0-0-0-1-0-0-sRGB-0-0-0-85-220.png/512x512bb.jpg"
+      "version": "439.4",
+      "currentVersionReleaseDate": "2026-09-21T08:08:26Z",
+      "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/91/90/c6/9190c6b7-80b4-0451-ac46-43f3429b7ff5/SuperG_ios26-0-0-1x_U007epad-0-0-0-1-0-0-sRGB-0-0-0-85-220.png/512x512bb.jpg"
     },
     "X": {
       "trackId": 333903271,
@@ -55,9 +55,9 @@
       "trackId": 389801252,
       "trackName": "Instagram",
       "sellerName": "Instagram, Inc.",
-      "version": "447.0.0",
-      "currentVersionReleaseDate": "2026-09-14T21:46:56Z",
-      "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a4/62/59/a46259eb-f016-aa37-df4b-c881362c6e91/Prod-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg"
+      "version": "448.0.0",
+      "currentVersionReleaseDate": "2026-09-21T15:59:55Z",
+      "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/f5/7f/2c/f57f2c00-2dff-4704-501b-ab6849c6277d/Prod-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg"
     },
     "Reddit": {
       "trackId": 1064216828,
@@ -98,6 +98,14 @@
       "version": "7.1.0",
       "currentVersionReleaseDate": "2026-09-09T19:33:00Z",
       "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/75/6f/65/756f65aa-ba4d-f3c9-23a2-fcdf0291dbd1/AppIcon-0-0-1x_U007emarketing-0-8-0-sRGB-85-220.png/512x512bb.jpg"
+    },
+    "Spotify": {
+      "trackId": 324684580,
+      "trackName": "Spotify: Music and Podcasts",
+      "sellerName": "Spotify",
+      "version": "9.1.84",
+      "currentVersionReleaseDate": "2026-09-18T06:25:38Z",
+      "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/97/1a/25/971a25f3-2f18-8d3f-892a-ab5eea139e78/AppIcon-0-0-1x_U007epad-0-1-0-0-sRGB-85-220.png/512x512bb.jpg"
     },
     "Netflix": {
       "trackId": 363590051,
