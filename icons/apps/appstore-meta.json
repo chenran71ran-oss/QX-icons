@@ -1,7 +1,7 @@
 {
   "source": "Apple iTunes Lookup API",
   "country": "us",
-  "synced_at": "2026-09-22T03:45:18.315790+00:00",
+  "synced_at": "2026-09-22T04:09:52.460892+00:00",
   "apps": {
     "ChatGPT": {
       "trackId": 6448311069,
@@ -108,5 +108,6 @@
       "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/80/91/60/809160d5-8984-b3ae-7c9b-a8e5db927df2/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-0-85-220.png/512x512bb.jpg"
     }
   },
-  "utility_errors": {}
+  "utility_errors": {},
+  "qx_icon_format": "PNG 108x108"
 }
