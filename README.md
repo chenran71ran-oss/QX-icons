@@ -75,6 +75,7 @@ static=ChatGPT, DMIT-美国-自动, RN｜联通优化, DIRECT, img-url=https://r
 | Google | <img src="./icons/qx/apps/Google-circle-v2.png" width="42"> | `icons/qx/apps/Google-circle-v2.png` |
 | Emby | <img src="./icons/qx/apps/Emby-circle-v2.png" width="42"> | `icons/qx/apps/Emby-circle-v2.png` |
 | Speedtest | <img src="./icons/qx/apps/Speedtest-circle-v2.png" width="42"> | `icons/qx/apps/Speedtest-circle-v2.png` |
+| Spotify | <img src="./icons/qx/apps/Spotify-circle-v2.png" width="42"> | `icons/qx/apps/Spotify-circle-v2.png` |
 | X | <img src="./icons/qx/apps/X-circle-v2.png" width="42"> | `icons/qx/apps/X-circle-v2.png` |
 | Telegram | <img src="./icons/qx/apps/Telegram-circle-v2.png" width="42"> | `icons/qx/apps/Telegram-circle-v2.png` |
 | Instagram | <img src="./icons/qx/apps/Instagram-circle-v2.png" width="42"> | `icons/qx/apps/Instagram-circle-v2.png` |
@@ -209,6 +210,7 @@ icons/qx/apps/ChatGPT-circle-v2.png
 - TikTok
 - Emby
 - Speedtest
+- Spotify
 - Netflix
 
 源图保存在：
