@@ -1,0 +1,12 @@
+# NAME: BandwidthTest
+# PURPOSE: nPerf + TestMy.net + Cloudflare Speed Test
+# NOTE:
+# - nPerf control/API traffic uses nperf.com; test servers use dynamic *.nperf.net FQDNs.
+# - Do not pin nPerf server IPs: server selection is dynamic and globally distributed.
+# - TestMy.net test/mirror hosts remain under testmy.net.
+# - Cloudflare Internet Speed Test uses speed.cloudflare.com; packet-loss TURN uses turn.cloudflare.com.
+HOST-SUFFIX,nperf.com,带宽测速
+HOST-SUFFIX,nperf.net,带宽测速
+HOST-SUFFIX,testmy.net,带宽测速
+HOST,speed.cloudflare.com,带宽测速
+HOST,turn.cloudflare.com,带宽测速
