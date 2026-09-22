@@ -1,7 +1,7 @@
 {
   "source": "Apple iTunes Lookup API",
   "country": "us",
-  "synced_at": "2026-09-22T04:38:59.470438+00:00",
+  "synced_at": "2026-09-22T05:31:33.064279+00:00",
   "apps": {
     "ChatGPT": {
       "trackId": 6448311069,
@@ -103,11 +103,11 @@
       "trackId": 363590051,
       "trackName": "Netflix",
       "sellerName": "Netflix, Inc.",
-      "version": "18.49.0",
-      "currentVersionReleaseDate": "2026-09-14T16:29:30Z",
-      "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/74/09/34/740934dc-bec6-9c6d-f377-d132f38873f0/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-0-85-220.png/512x512bb.jpg"
+      "version": "18.50.0",
+      "currentVersionReleaseDate": "2026-09-21T16:11:28Z",
+      "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/80/91/60/809160d5-8984-b3ae-7c9b-a8e5db927df2/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-0-85-220.png/512x512bb.jpg"
     }
   },
   "utility_errors": {},
-  "qx_icon_format": "PNG 108x108 RGBA; app/subscription icons circular with transparent corners"
+  "qx_icon_format": "Policy icons: PNG 108x108 RGBA circular; server_remote icons: PNG 144x144 monochrome template masks"
 }
