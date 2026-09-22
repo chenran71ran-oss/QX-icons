@@ -25,7 +25,7 @@ jobs:
           python - <<'PY'
           from pathlib import Path
           import json, urllib.request, datetime, base64
-          from PIL import Image, ImageOps, ImageFile
+          from PIL import Image, ImageOps, ImageFile, ImageDraw, ImageChops, ImageFont
           ImageFile.LOAD_TRUNCATED_IMAGES = True
 
           ROOT = Path(".")
@@ -35,11 +35,13 @@ jobs:
           QX_APP_DIR = ROOT / "icons" / "qx" / "apps"
           QX_UTIL_DIR = ROOT / "icons" / "qx" / "utility"
           QX_SUB_DIR = ROOT / "icons" / "qx" / "subscriptions"
+          QX_PROXY_DIR = ROOT / "icons" / "qx" / "proxy"
           APP_DIR.mkdir(parents=True, exist_ok=True)
           UTIL_DIR.mkdir(parents=True, exist_ok=True)
           QX_APP_DIR.mkdir(parents=True, exist_ok=True)
           QX_UTIL_DIR.mkdir(parents=True, exist_ok=True)
           QX_SUB_DIR.mkdir(parents=True, exist_ok=True)
+          QX_PROXY_DIR.mkdir(parents=True, exist_ok=True)
 
           # Official Apple App Store track IDs. Artwork is fetched from Apple's
           # Lookup API on each run, so the repo follows the current App Store icon.
@@ -175,8 +177,111 @@ jobs:
               stem = Path(dst_name).stem
               qx_png(src, QX_SUB_DIR / f"{stem}-circle-v2.png", circular=True)
 
+          # QX PROXY/node-resource area does not display full-color artwork.
+          # It treats remote-resource icons as monochrome template masks, so a
+          # fully opaque circular app-style image becomes only a solid blue dot.
+          # Generate dedicated 144x144 white-on-transparent glyphs for server_remote.
+          PROXY_SIZE = 576
+          def proxy_canvas():
+              return Image.new("RGBA", (PROXY_SIZE, PROXY_SIZE), (0, 0, 0, 0))
+
+          def proxy_save(im, filename):
+              im = im.resize((144, 144), Image.Resampling.LANCZOS)
+              im.save(QX_PROXY_DIR / filename, format="PNG", optimize=True)
+
+          FG = (255, 255, 255, 255)
+
+          # 良心云: cloud + heart
+          im = proxy_canvas()
+          d = ImageDraw.Draw(im)
+          d.ellipse((120, 220, 310, 410), fill=FG)
+          d.ellipse((235, 130, 420, 380), fill=FG)
+          d.ellipse((330, 220, 500, 405), fill=FG)
+          d.rounded_rectangle((110, 280, 500, 430), radius=70, fill=FG)
+          cut = Image.new("L", (PROXY_SIZE, PROXY_SIZE), 0)
+          cd = ImageDraw.Draw(cut)
+          cd.ellipse((255, 260, 320, 325), fill=255)
+          cd.ellipse((305, 260, 370, 325), fill=255)
+          cd.polygon([(255, 295), (370, 295), (312, 365)], fill=255)
+          im.putalpha(ImageChops.subtract(im.getchannel("A"), cut))
+          d = ImageDraw.Draw(im)
+          for y in (372, 398):
+              d.rounded_rectangle((210, y, 410, y + 12), radius=6, fill=(0, 0, 0, 0))
+          proxy_save(im, "Liangxin.png")
+
+          # 海獭: otter face + wave
+          im = proxy_canvas()
+          d = ImageDraw.Draw(im)
+          d.arc((85, 345, 490, 560), start=190, end=350, fill=FG, width=45)
+          d.arc((220, 330, 515, 510), start=210, end=360, fill=FG, width=36)
+          d.ellipse((145, 145, 430, 430), fill=FG)
+          d.ellipse((120, 170, 200, 250), fill=FG)
+          d.ellipse((375, 170, 455, 250), fill=FG)
+          cut = Image.new("L", (PROXY_SIZE, PROXY_SIZE), 0)
+          cd = ImageDraw.Draw(cut)
+          cd.ellipse((142, 190, 177, 225), fill=255)
+          cd.ellipse((398, 190, 433, 225), fill=255)
+          cd.ellipse((220, 240, 250, 270), fill=255)
+          cd.ellipse((325, 240, 355, 270), fill=255)
+          cd.ellipse((275, 280, 325, 320), fill=255)
+          cd.arc((255, 305, 305, 350), 0, 120, fill=255, width=12)
+          cd.arc((295, 305, 345, 350), 60, 180, fill=255, width=12)
+          for off in (0, 20, 40):
+              cd.line((175, 300 + off, 240, 290 + off), fill=255, width=8)
+              cd.line((335, 290 + off, 400, 300 + off), fill=255, width=8)
+          im.putalpha(ImageChops.subtract(im.getchannel("A"), cut))
+          proxy_save(im, "Haita.png")
+
+          # 月兔: crescent + rabbit
+          im = proxy_canvas()
+          d = ImageDraw.Draw(im)
+          d.ellipse((80, 80, 410, 500), fill=FG)
+          cut = Image.new("L", (PROXY_SIZE, PROXY_SIZE), 0)
+          cd = ImageDraw.Draw(cut)
+          cd.ellipse((190, 65, 470, 420), fill=255)
+          im.putalpha(ImageChops.subtract(im.getchannel("A"), cut))
+          d = ImageDraw.Draw(im)
+          d.ellipse((290, 270, 450, 430), fill=FG)
+          d.ellipse((310, 125, 355, 310), fill=FG)
+          d.ellipse((365, 115, 410, 305), fill=FG)
+          d.ellipse((260, 375, 440, 500), fill=FG)
+          cut = Image.new("L", (PROXY_SIZE, PROXY_SIZE), 0)
+          cd = ImageDraw.Draw(cut)
+          cd.ellipse((395, 320, 415, 340), fill=255)
+          im.putalpha(ImageChops.subtract(im.getchannel("A"), cut))
+          proxy_save(im, "Yuetutu.png")
+
+          # DMIT: server stack + DM monogram
+          im = proxy_canvas()
+          d = ImageDraw.Draw(im)
+          for y in (150, 240, 330):
+              d.rounded_rectangle((80, y, 230, y + 70), radius=16, outline=FG, width=20)
+              d.ellipse((190, y + 25, 205, y + 40), fill=FG)
+          font_path = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
+          if Path(font_path).exists():
+              font = ImageFont.truetype(font_path, 210)
+              d.text((210, 180), "DM", font=font, fill=FG)
+          proxy_save(im, "DMIT.png")
+
+          # RN-VPS: shield + star + three network bars
+          import math
+          im = proxy_canvas()
+          d = ImageDraw.Draw(im)
+          pts = [(288, 65), (455, 120), (430, 340), (288, 470), (146, 340), (121, 120)]
+          d.line(pts + [pts[0]], fill=FG, width=28, joint="curve")
+          cx, cy, r1, r2 = 288, 190, 65, 28
+          star = []
+          for i in range(10):
+              a = -math.pi / 2 + i * math.pi / 5
+              r = r1 if i % 2 == 0 else r2
+              star.append((cx + math.cos(a) * r, cy + math.sin(a) * r))
+          d.polygon(star, fill=FG)
+          for y in (285, 335, 385):
+              d.rounded_rectangle((215, y, 361, y + 24), radius=10, fill=FG)
+          proxy_save(im, "RN-VPS.png")
+
           meta["utility_errors"] = utility_errors
-          meta["qx_icon_format"] = "PNG 108x108 RGBA; app/subscription icons circular with transparent corners"
+          meta["qx_icon_format"] = "Policy icons: PNG 108x108 RGBA circular; server_remote icons: PNG 144x144 monochrome template masks"
           (APP_DIR / "appstore-meta.json").write_text(
               json.dumps(meta, ensure_ascii=False, indent=2) + "\n",
               encoding="utf-8"
