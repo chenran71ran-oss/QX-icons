@@ -1,0 +1,6 @@
+payload:
+  - DOMAIN-SUFFIX,nperf.com
+  - DOMAIN-SUFFIX,nperf.net
+  - DOMAIN-SUFFIX,testmy.net
+  - DOMAIN,speed.cloudflare.com
+  - DOMAIN,turn.cloudflare.com
