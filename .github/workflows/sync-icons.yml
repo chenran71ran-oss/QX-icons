@@ -1,0 +1,116 @@
+name: Sync QX icons
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/sync-icons.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch latest official App Store artwork and utility icons
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json, urllib.request, datetime
+
+          ROOT = Path(".")
+          APP_DIR = ROOT / "icons" / "apps"
+          UTIL_DIR = ROOT / "icons" / "utility"
+          APP_DIR.mkdir(parents=True, exist_ok=True)
+          UTIL_DIR.mkdir(parents=True, exist_ok=True)
+
+          apps = {
+              "ChatGPT": 6448311069,
+              "Claude": 6473753684,
+              "Gemini": 6477489729,
+              "Google": 284815942,
+              "X": 333903271,
+              "Telegram": 686449807,
+              "Instagram": 389801252,
+              "Reddit": 1064216828,
+              "GitHub": 1477376905,
+              "TikTok": 835599320,
+              "Emby": 992180193,
+              "Speedtest": 300704847,
+              "Netflix": 363590051,
+          }
+
+          def get_json(url):
+              req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+              with urllib.request.urlopen(req, timeout=30) as r:
+                  return json.load(r)
+
+          def download(url, path):
+              req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+              with urllib.request.urlopen(req, timeout=30) as r:
+                  path.write_bytes(r.read())
+
+          meta = {
+              "source": "Apple iTunes Search/Lookup API",
+              "country": "us",
+              "synced_at": datetime.datetime.now(datetime.timezone.utc).isoformat(),
+              "apps": {}
+          }
+
+          for name, app_id in apps.items():
+              data = get_json(f"https://itunes.apple.com/lookup?id={app_id}&country=us")
+              if not data.get("results"):
+                  raise RuntimeError(f"No App Store result for {name} ({app_id})")
+              item = data["results"][0]
+              artwork = item.get("artworkUrl512") or item.get("artworkUrl100")
+              if not artwork:
+                  raise RuntimeError(f"No artwork URL for {name}")
+              download(artwork, APP_DIR / f"{name}.jpg")
+              meta["apps"][name] = {
+                  "trackId": item.get("trackId"),
+                  "trackName": item.get("trackName"),
+                  "version": item.get("version"),
+                  "currentVersionReleaseDate": item.get("currentVersionReleaseDate"),
+                  "artworkUrl512": artwork,
+              }
+
+          utility = {
+              "US.png": "https://raw.githubusercontent.com/Hawaiine/Oasisic-Icons/main/icons/Country/US.png",
+              "Japan.png": "https://raw.githubusercontent.com/Hawaiine/Oasisic-Icons/main/icons/Country/Japan.png",
+              "Singapore.png": "https://raw.githubusercontent.com/Hawaiine/Oasisic-Icons/main/icons/Country/Singapore.png",
+              "HongKong.png": "https://raw.githubusercontent.com/Hawaiine/Oasisic-Icons/main/icons/Country/HongKong.png",
+              "Taiwan.png": "https://raw.githubusercontent.com/Hawaiine/Oasisic-Icons/main/icons/Country/CN-Taiwan.png",
+              "Korea.png": "https://raw.githubusercontent.com/Hawaiine/Oasisic-Icons/main/icons/Country/Korea.png",
+              "Turkey.png": "https://raw.githubusercontent.com/Hawaiine/Oasisic-Icons/main/icons/Country/Turkey.png",
+              "China.png": "https://raw.githubusercontent.com/Hawaiine/Oasisic-Icons/main/icons/Country/China.png",
+              "Auto.png": "https://raw.githubusercontent.com/Hawaiine/Oasisic-Icons/main/icons/General/Auto.png",
+              "Blacklist.png": "https://raw.githubusercontent.com/Hawaiine/Oasisic-Icons/main/icons/General/Blacklist.png",
+              "Global-1.png": "https://raw.githubusercontent.com/Hawaiine/Oasisic-Icons/main/icons/General/Global-1.png",
+              "Global-2.png": "https://raw.githubusercontent.com/Hawaiine/Oasisic-Icons/main/icons/General/Global-2.png",
+              "Cryptocurrency.png": "https://raw.githubusercontent.com/Hawaiine/Oasisic-Icons/main/icons/Crypto/Cryptocurrency.png",
+              "WeChatPayCoupon.png": "https://raw.githubusercontent.com/FoKit/Scripts/main/images/wechat_pay_coupon.png",
+          }
+
+          for filename, url in utility.items():
+              download(url, UTIL_DIR / filename)
+
+          (APP_DIR / "appstore-meta.json").write_text(
+              json.dumps(meta, ensure_ascii=False, indent=2) + "\n",
+              encoding="utf-8"
+          )
+          PY
+
+      - name: Commit refreshed icons
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add icons/apps icons/utility
+          if git diff --cached --quiet; then
+            echo "No icon changes."
+          else
+            git commit -m "Sync latest App Store and utility icons [skip ci]"
+            git push
+          fi
