@@ -77,21 +77,22 @@ jobs:
                   "artworkUrl512": artwork,
               }
 
+          base = "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-Icons@main/icons"
           utility = {
-              "US.png": "https://raw.githubusercontent.com/Hawaiine/Oasisic-Icons/main/icons/Country/US.png",
-              "Japan.png": "https://raw.githubusercontent.com/Hawaiine/Oasisic-Icons/main/icons/Country/Japan.png",
-              "Singapore.png": "https://raw.githubusercontent.com/Hawaiine/Oasisic-Icons/main/icons/Country/Singapore.png",
-              "HongKong.png": "https://raw.githubusercontent.com/Hawaiine/Oasisic-Icons/main/icons/Country/HongKong.png",
-              "Taiwan.png": "https://raw.githubusercontent.com/Hawaiine/Oasisic-Icons/main/icons/Country/CN-Taiwan.png",
-              "Korea.png": "https://raw.githubusercontent.com/Hawaiine/Oasisic-Icons/main/icons/Country/Korea.png",
-              "Turkey.png": "https://raw.githubusercontent.com/Hawaiine/Oasisic-Icons/main/icons/Country/Turkey.png",
-              "China.png": "https://raw.githubusercontent.com/Hawaiine/Oasisic-Icons/main/icons/Country/China.png",
-              "Auto.png": "https://raw.githubusercontent.com/Hawaiine/Oasisic-Icons/main/icons/General/Auto.png",
-              "Blacklist.png": "https://raw.githubusercontent.com/Hawaiine/Oasisic-Icons/main/icons/General/Blacklist.png",
-              "Global-1.png": "https://raw.githubusercontent.com/Hawaiine/Oasisic-Icons/main/icons/General/Global-1.png",
-              "Global-2.png": "https://raw.githubusercontent.com/Hawaiine/Oasisic-Icons/main/icons/General/Global-2.png",
-              "Cryptocurrency.png": "https://raw.githubusercontent.com/Hawaiine/Oasisic-Icons/main/icons/Crypto/Cryptocurrency.png",
-              "WeChatPayCoupon.png": "https://raw.githubusercontent.com/FoKit/Scripts/main/images/wechat_pay_coupon.png",
+              "US.png": f"{base}/Country/US.png",
+              "Japan.png": f"{base}/Country/Japan.png",
+              "Singapore.png": f"{base}/Country/Singapore.png",
+              "HongKong.png": f"{base}/Country/HongKong.png",
+              "Taiwan.png": f"{base}/Country/CN-Taiwan.png",
+              "Korea.png": f"{base}/Country/Korea.png",
+              "Turkey.png": f"{base}/Country/Turkey.png",
+              "China.png": f"{base}/Country/China.png",
+              "Auto.png": f"{base}/General/Auto.png",
+              "Blacklist.png": f"{base}/General/Blacklist.png",
+              "Global-1.png": f"{base}/General/Global-1.png",
+              "Global-2.png": f"{base}/General/Global-2.png",
+              "Cryptocurrency.png": f"{base}/Crypto/Cryptocurrency.png",
+              "WeChatPayCoupon.png": "https://cdn.jsdelivr.net/gh/FoKit/Scripts@main/images/wechat_pay_coupon.png",
           }
 
           for filename, url in utility.items():
