@@ -2,6 +2,8 @@ name: Sync QX icons
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "17 3 * * 1"
   push:
     paths:
       - ".github/workflows/sync-icons.yml"
@@ -19,7 +21,7 @@ jobs:
         run: |
           python - <<'PY'
           from pathlib import Path
-          import json, urllib.request, datetime
+          import json, urllib.request, datetime, imghdr
 
           ROOT = Path(".")
           APP_DIR = ROOT / "icons" / "apps"
@@ -27,6 +29,8 @@ jobs:
           APP_DIR.mkdir(parents=True, exist_ok=True)
           UTIL_DIR.mkdir(parents=True, exist_ok=True)
 
+          # Official Apple App Store track IDs. Artwork is fetched from Apple's
+          # Lookup API on each run, so the repo follows the current App Store icon.
           apps = {
               "ChatGPT": 6448311069,
               "Claude": 6473753684,
@@ -51,10 +55,13 @@ jobs:
           def download(url, path):
               req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
               with urllib.request.urlopen(req, timeout=30) as r:
-                  path.write_bytes(r.read())
+                  data = r.read()
+              if not data:
+                  raise RuntimeError(f"empty response: {url}")
+              path.write_bytes(data)
 
           meta = {
-              "source": "Apple iTunes Search/Lookup API",
+              "source": "Apple iTunes Lookup API",
               "country": "us",
               "synced_at": datetime.datetime.now(datetime.timezone.utc).isoformat(),
               "apps": {}
@@ -72,35 +79,43 @@ jobs:
               meta["apps"][name] = {
                   "trackId": item.get("trackId"),
                   "trackName": item.get("trackName"),
+                  "sellerName": item.get("sellerName"),
                   "version": item.get("version"),
                   "currentVersionReleaseDate": item.get("currentVersionReleaseDate"),
                   "artworkUrl512": artwork,
               }
 
-          base = "https://cdn.jsdelivr.net/gh/Hawaiine/Oasisic-Icons@main/icons"
+          # Oasisic reorganized its tree into per-icon subfolders. Mirror the
+          # current stable paths into this repo so QX never depends on a third
+          # party icon URL at runtime.
+          base = "https://raw.githubusercontent.com/Hawaiine/Oasisic-Icons/main/icons"
           utility = {
-              "US.png": f"{base}/Country/US.png",
-              "Japan.png": f"{base}/Country/Japan.png",
-              "Singapore.png": f"{base}/Country/Singapore.png",
-              "HongKong.png": f"{base}/Country/HongKong.png",
-              "Taiwan.png": f"{base}/Country/CN-Taiwan.png",
-              "Korea.png": f"{base}/Country/Korea.png",
-              "Turkey.png": f"{base}/Country/Turkey.png",
-              "China.png": f"{base}/Country/China.png",
-              "Auto.png": f"{base}/General/Auto.png",
-              "Blacklist.png": f"{base}/General/Blacklist.png",
-              "Global-1.png": f"{base}/General/Global-1.png",
-              "Global-2.png": f"{base}/General/Global-2.png",
-              "Cryptocurrency.png": f"{base}/Crypto/Cryptocurrency.png",
-              "WeChatPayCoupon.png": "https://cdn.jsdelivr.net/gh/FoKit/Scripts@main/images/wechat_pay_coupon.png",
+              "US.png": f"{base}/Country/US/US.png",
+              "Japan.png": f"{base}/Country/Japan/Japan.png",
+              "Singapore.png": f"{base}/Country/Singapore/Singapore.png",
+              "HongKong.png": f"{base}/Country/HongKong/HongKong.png",
+              "Taiwan.png": f"{base}/Country/CN-Taiwan/CN-Taiwan.png",
+              "Korea.png": f"{base}/Country/Korea/Korea.png",
+              "Turkey.png": f"{base}/Country/Turkey/Turkey.png",
+              "China.png": f"{base}/Country/China/China.png",
+              "Auto.png": f"{base}/General/Auto/Auto.png",
+              "Blacklist.png": f"{base}/General/Blacklist/Blacklist.png",
+              "Global-1.png": f"{base}/General/Global/Global.png",
+              "Global-2.png": f"{base}/General/Global/Global01.png",
+              "Cryptocurrency.png": f"{base}/Crypto/Cryptocurrency/Cryptocurrency.png",
+              "WeChatPayCoupon.png": "https://raw.githubusercontent.com/FoKit/Scripts/main/images/wechat_pay_coupon.png",
           }
 
+          utility_errors = {}
           for filename, url in utility.items():
               try:
                   download(url, UTIL_DIR / filename)
+                  print(f"Synced utility {filename}")
               except Exception as e:
-                  print(f"Skip utility {filename}: {e}")
+                  utility_errors[filename] = str(e)
+                  print(f"WARNING: skip utility {filename}: {e}")
 
+          meta["utility_errors"] = utility_errors
           (APP_DIR / "appstore-meta.json").write_text(
               json.dumps(meta, ensure_ascii=False, indent=2) + "\n",
               encoding="utf-8"
