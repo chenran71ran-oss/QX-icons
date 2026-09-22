@@ -116,6 +116,7 @@ jobs:
               "Global-2.png": f"{base}/General/Global/Global01.png",
               "Cryptocurrency.png": f"{base}/Crypto/Cryptocurrency/Cryptocurrency.png",
               "WeChatPayCoupon.png": "https://raw.githubusercontent.com/FoKit/Scripts/main/images/wechat_pay_coupon.png",
+              "Profile.png": "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Personal.png",
           }
 
           utility_errors = {}
