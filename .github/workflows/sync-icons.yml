@@ -96,7 +96,10 @@ jobs:
           }
 
           for filename, url in utility.items():
-              download(url, UTIL_DIR / filename)
+              try:
+                  download(url, UTIL_DIR / filename)
+              except Exception as e:
+                  print(f"Skip utility {filename}: {e}")
 
           (APP_DIR / "appstore-meta.json").write_text(
               json.dumps(meta, ensure_ascii=False, indent=2) + "\n",
