@@ -1,0 +1,10 @@
+# NAME: GlobalSpeed
+# APP: 全球网测
+# DEVELOPER: China Academy of Information and Communications Technology (CAICT)
+# NOTE: QX 仅能按域名/IP/UA 分流；全球网测测速节点可能由控制接口动态返回 IP。
+#       本规则覆盖已确认的控制面与下载配置域名。测速数据面的动态 IP 如需强制走指定策略，
+#       应结合 QX 请求记录补充实际命中的测速节点 IP。
+HOST-SUFFIX,cnspeedtest.cn,GlobalSpeed
+HOST-SUFFIX,cnspeedtest.com,GlobalSpeed
+HOST,dlcv2.cnspeedtest.cn,GlobalSpeed
+HOST,down.cnspeedtest.cn,GlobalSpeed
