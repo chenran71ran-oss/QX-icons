@@ -17,17 +17,28 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Install Pillow
+        run: python -m pip install --quiet pillow
+
       - name: Fetch latest official App Store artwork and utility icons
         run: |
           python - <<'PY'
           from pathlib import Path
-          import json, urllib.request, datetime, imghdr
+          import json, urllib.request, datetime
+          from PIL import Image, ImageOps
 
           ROOT = Path(".")
           APP_DIR = ROOT / "icons" / "apps"
           UTIL_DIR = ROOT / "icons" / "utility"
+          SUB_DIR = ROOT / "icons" / "subscriptions"
+          QX_APP_DIR = ROOT / "icons" / "qx" / "apps"
+          QX_UTIL_DIR = ROOT / "icons" / "qx" / "utility"
+          QX_SUB_DIR = ROOT / "icons" / "qx" / "subscriptions"
           APP_DIR.mkdir(parents=True, exist_ok=True)
           UTIL_DIR.mkdir(parents=True, exist_ok=True)
+          QX_APP_DIR.mkdir(parents=True, exist_ok=True)
+          QX_UTIL_DIR.mkdir(parents=True, exist_ok=True)
+          QX_SUB_DIR.mkdir(parents=True, exist_ok=True)
 
           # Official Apple App Store track IDs. Artwork is fetched from Apple's
           # Lookup API on each run, so the repo follows the current App Store icon.
@@ -115,7 +126,35 @@ jobs:
                   utility_errors[filename] = str(e)
                   print(f"WARNING: skip utility {filename}: {e}")
 
+          def qx_png(src, dst):
+              with Image.open(src) as im:
+                  im = ImageOps.fit(im.convert("RGBA"), (108, 108), method=Image.Resampling.LANCZOS)
+                  im.save(dst, format="PNG", optimize=True)
+
+          # Quantumult X remote policy/server icons are normalized to exact
+          # 108x108 PNG files. Keep originals untouched and publish QX-ready
+          # derivatives under icons/qx/.
+          for name in apps:
+              qx_png(APP_DIR / f"{name}.jpg", QX_APP_DIR / f"{name}.png")
+
+          for src in UTIL_DIR.glob("*.png"):
+              qx_png(src, QX_UTIL_DIR / src.name)
+
+          subscription_files = {
+              "Liangxin.png": "Liangxin.png",
+              "Haita.png": "Haita.png",
+              "Yuetutu.png": "Yuetutu.png",
+              "DMIT.png": "DMIT.png",
+              "RN-VPS.png": "RN-VPS.png",
+          }
+          for src_name, dst_name in subscription_files.items():
+              src = SUB_DIR / src_name
+              if not src.exists():
+                  raise RuntimeError(f"Missing subscription icon: {src}")
+              qx_png(src, QX_SUB_DIR / dst_name)
+
           meta["utility_errors"] = utility_errors
+          meta["qx_icon_format"] = "PNG 108x108"
           (APP_DIR / "appstore-meta.json").write_text(
               json.dumps(meta, ensure_ascii=False, indent=2) + "\n",
               encoding="utf-8"
@@ -126,7 +165,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add icons/apps icons/utility
+          git add icons/apps icons/utility icons/qx
           if git diff --cached --quiet; then
             echo "No icon changes."
           else
