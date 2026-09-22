@@ -127,16 +127,32 @@ jobs:
                   utility_errors[filename] = str(e)
                   print(f"WARNING: skip utility {filename}: {e}")
 
-          def qx_png(src, dst):
+          def qx_png(src, dst, circular=False):
               with Image.open(src) as im:
                   im = ImageOps.fit(im.convert("RGBA"), (108, 108), method=Image.Resampling.LANCZOS)
+                  if circular:
+                      # QX shows policy icons in a circular visual slot. Build a true
+                      # RGBA circle with transparent corners instead of a square/squircle.
+                      scale = 4
+                      mask = Image.new("L", (108 * scale, 108 * scale), 0)
+                      from PIL import ImageDraw, ImageChops
+                      draw = ImageDraw.Draw(mask)
+                      pad = 5 * scale
+                      draw.ellipse((pad, pad, 108 * scale - pad - 1, 108 * scale - pad - 1), fill=255)
+                      mask = mask.resize((108, 108), Image.Resampling.LANCZOS)
+                      alpha = im.getchannel("A")
+                      im.putalpha(ImageChops.multiply(alpha, mask))
                   im.save(dst, format="PNG", optimize=True)
 
           # Quantumult X remote policy/server icons are normalized to exact
           # 108x108 PNG files. Keep originals untouched and publish QX-ready
           # derivatives under icons/qx/.
           for name in apps:
-              qx_png(APP_DIR / f"{name}.jpg", QX_APP_DIR / f"{name}.png")
+              src = APP_DIR / f"{name}.jpg"
+              # Replace the canonical QX file with a true circular PNG and also
+              # publish a versioned filename so QX can bypass stale image cache.
+              qx_png(src, QX_APP_DIR / f"{name}.png", circular=True)
+              qx_png(src, QX_APP_DIR / f"{name}-circle-v2.png", circular=True)
 
           for src in UTIL_DIR.glob("*.png"):
               qx_png(src, QX_UTIL_DIR / src.name)
@@ -154,10 +170,12 @@ jobs:
               src = SUB_DIR / src_name
               if not src.exists():
                   raise RuntimeError(f"Missing subscription icon: {src}")
-              qx_png(src, QX_SUB_DIR / dst_name)
+              qx_png(src, QX_SUB_DIR / dst_name, circular=True)
+              stem = Path(dst_name).stem
+              qx_png(src, QX_SUB_DIR / f"{stem}-circle-v2.png", circular=True)
 
           meta["utility_errors"] = utility_errors
-          meta["qx_icon_format"] = "PNG 108x108"
+          meta["qx_icon_format"] = "PNG 108x108 RGBA; app/subscription icons circular with transparent corners"
           (APP_DIR / "appstore-meta.json").write_text(
               json.dumps(meta, ensure_ascii=False, indent=2) + "\n",
               encoding="utf-8"
