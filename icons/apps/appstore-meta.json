@@ -1,7 +1,7 @@
 {
   "source": "Apple iTunes Lookup API",
   "country": "us",
-  "synced_at": "2026-10-18T14:10:32.951150+00:00",
+  "synced_at": "2026-10-18T14:25:06.660329+00:00",
   "apps": {
     "ChatGPT": {
       "trackId": 6448311069,
@@ -15,9 +15,9 @@
       "trackId": 6473753684,
       "trackName": "Claude by Anthropic",
       "sellerName": "Anthropic PBC",
-      "version": "1.261016.20",
-      "currentVersionReleaseDate": "2026-10-17T23:27:06Z",
-      "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a4/22/d1/a422d187-52f2-ec6f-bb2d-87d3558373e6/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg"
+      "version": "1.261014.20",
+      "currentVersionReleaseDate": "2026-10-15T21:12:08Z",
+      "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/95/40/fc/9540fc5b-705f-03bb-fefd-a70c3f840ced/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg"
     },
     "Gemini": {
       "trackId": 6477489729,
