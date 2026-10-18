@@ -254,9 +254,9 @@ icons/qx/apps/
 
 ### RackNerd / RackSmart
 
-- `RackNerd` 策略组使用青绿色“服务器＋盾牌”图案，与 RackSmart 的蓝色“服务器＋闪电”保持同系列风格；原 RN-VPS 旧路径与节点资源图标继续可用。
+- `RackNerd` 策略组使用蓝色“双塔服务器”图案，与 RackSmart 的蓝色“服务器＋闪电”保持同系列风格；原 RN-VPS 旧路径与节点资源图标继续可用。
 - `RackSmart` 暂用蓝色服务器与闪电图形，属于自定义占位图标，不是官方商标。
-- `scripts/generate-vps-icons.py` 生成源图、108×108 圆形策略图标及 144×144 透明单色资源图标；自动同步会保留并重建这些文件。RackNerd 策略组推荐使用 `RackNerd-circle-v3.png`，用于绕过旧图片缓存。
+- `scripts/generate-vps-icons.py` 生成源图、108×108 圆形策略图标及 144×144 透明单色资源图标；自动同步会保留并重建这些文件。RackNerd 策略组推荐使用 `RackNerd-circle-v4.png`，用于绕过旧图片缓存。
 - 配置使用 `icons/qx/proxy/RackNerd.png` / `RackSmart.png` 和 `icons/qx/subscriptions/RackNerd-circle-v2.png` / `RackSmart-circle-v2.png`；Clash 可引用 `icons/subscriptions/` 下同名 PNG。
 
 ## QX 图片缓存

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Reproducible VPS icons: server racks with a shield or lightning accent."""
+"""Blue VPS icons: twin server towers for RN and lightning racks for RS."""
 from pathlib import Path
 from shutil import copyfile
 from PIL import Image, ImageDraw
@@ -22,13 +22,14 @@ def racksmart_glyph():
 def racknerd_glyph():
     im = Image.new('RGBA', (SIZE, SIZE), (0, 0, 0, 0))
     d = ImageDraw.Draw(im)
-    for y in (112, 236, 360):
-        d.rounded_rectangle((88, y, 405, y + 86), radius=22, outline=WHITE, width=20)
-        d.ellipse((119, y + 31, 143, y + 55), fill=WHITE)
-        d.rounded_rectangle((168, y + 36, 282, y + 50), radius=7, fill=WHITE)
-    # A compact shield distinguishes RN from RackSmart's lightning.
-    d.polygon([(422, 235), (512, 268), (497, 379), (422, 449), (347, 379), (332, 268)], fill=WHITE)
-    d.line([(380, 335), (411, 366), (467, 306)], fill=(20, 153, 142, 255), width=23, joint='curve')
+    # Upright cabinets distinguish RN from the horizontal RackSmart racks.
+    for x,top in ((102,90),(306,140)):
+        d.rounded_rectangle((x,top,x+168,431),radius=22,outline=WHITE,width=21)
+        for y in (top+41,top+99,top+157):
+            d.rounded_rectangle((x+32,y,x+136,y+18),radius=8,fill=WHITE)
+        d.ellipse((x+69,376,x+99,406),fill=WHITE)
+    d.line((186,431,186,472,390,472,390,431),fill=WHITE,width=20,joint='curve')
+    d.ellipse((271,455,305,489),fill=WHITE)
     return im
 
 def save(im, rel, size):
@@ -46,12 +47,13 @@ def main():
             target.parent.mkdir(parents=True, exist_ok=True)
             copyfile(ROOT / source, target)
     rn_color = Image.new('RGBA', (SIZE, SIZE), (0, 0, 0, 0))
-    ImageDraw.Draw(rn_color).ellipse((28, 28, SIZE-29, SIZE-29), fill=(20, 153, 142, 255))
+    ImageDraw.Draw(rn_color).ellipse((28, 28, SIZE-29, SIZE-29), fill=(35, 104, 218, 255))
     rn_color.alpha_composite(racknerd_glyph().resize((440, 440), Image.Resampling.LANCZOS), (68, 68))
     save(rn_color, 'icons/subscriptions/RackNerd.png', 432)
     save(rn_color, 'icons/qx/subscriptions/RackNerd.png', 108)
     save(rn_color, 'icons/qx/subscriptions/RackNerd-circle-v2.png', 108)
     save(rn_color, 'icons/qx/subscriptions/RackNerd-circle-v3.png', 108)
+    save(rn_color, 'icons/qx/subscriptions/RackNerd-circle-v4.png', 108)
     glyph = racksmart_glyph()
     save(glyph, 'icons/qx/proxy/RackSmart.png', 144)
     color = Image.new('RGBA', (SIZE, SIZE), (0, 0, 0, 0))
