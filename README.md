@@ -10,7 +10,7 @@
 - QX 策略组：生成 108×108、RGBA、透明圆形 PNG；
 - QX 节点资源 / 订阅：单独生成 144×144、单色透明模板 PNG；
 - 国家 / 通用图标：镜像到本仓库，避免配置运行时依赖多个第三方地址；
-- 自定义订阅品牌图标：良心云、海獭、月兔、DMIT、RN-VPS。
+- 自定义订阅品牌图标：良心云、海獭、月兔、DMIT、RackNerd、RackSmart（保留 RN-VPS 旧路径）。
 
 ---
 
@@ -116,7 +116,8 @@ https://example.com/subscription, tag=DMIT, img-url=https://raw.githubuserconten
 | 海獭 | <img src="./icons/qx/proxy/Haita.png" width="42"> |
 | 月兔 | <img src="./icons/qx/proxy/Yuetutu.png" width="42"> |
 | DMIT | <img src="./icons/qx/proxy/DMIT.png" width="42"> |
-| RN-VPS | <img src="./icons/qx/proxy/RN-VPS.png" width="42"> |
+| RackNerd | <img src="./icons/qx/proxy/RackNerd.png" width="42"> |
+| RackSmart | <img src="./icons/qx/proxy/RackSmart.png" width="42"> |
 
 ---
 
@@ -251,6 +252,13 @@ icons/qx/apps/
 
 ---
 
+### RackNerd / RackSmart
+
+- `RackNerd` 延续原 RN-VPS 图案，新文件名与配置一致，旧路径继续可用。
+- `RackSmart` 暂用蓝色服务器与闪电图形，属于自定义占位图标，不是官方商标。
+- `scripts/generate-vps-icons.py` 生成源图、108×108 圆形策略图标及 144×144 透明单色资源图标；自动同步会保留并重建这些文件。
+- 配置使用 `icons/qx/proxy/RackNerd.png` / `RackSmart.png` 和 `icons/qx/subscriptions/RackNerd-circle-v2.png` / `RackSmart-circle-v2.png`；Clash 可引用 `icons/subscriptions/` 下同名 PNG。
+
 ## QX 图片缓存
 
 Quantumult X 会缓存已加载的远程图标。
@@ -298,3 +306,4 @@ RN-VPS-circle-v2.png
 ## Repository
 
 https://github.com/chenran71ran-oss/QX-icons
+
