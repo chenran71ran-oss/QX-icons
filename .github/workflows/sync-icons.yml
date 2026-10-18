@@ -7,6 +7,7 @@ on:
   push:
     paths:
       - ".github/workflows/sync-icons.yml"
+      - "scripts/generate-vps-icons.py"
 
 permissions:
   contents: write
