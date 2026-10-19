@@ -1,7 +1,7 @@
 {
   "source": "Apple iTunes Lookup API",
   "country": "us",
-  "synced_at": "2026-10-18T14:34:39.402193+00:00",
+  "synced_at": "2026-10-19T08:58:47.056823+00:00",
   "apps": {
     "ChatGPT": {
       "trackId": 6448311069,
@@ -31,9 +31,9 @@
       "trackId": 284815942,
       "trackName": "Google",
       "sellerName": "Google LLC",
-      "version": "442.5",
-      "currentVersionReleaseDate": "2026-10-14T21:49:48Z",
-      "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/52/de/cd/52decd9f-2d96-bb60-a7c0-7dca9be8d6ed/SuperG_ios26-0-0-1x_U007epad-0-0-0-1-0-0-sRGB-0-0-0-85-220.png/512x512bb.jpg"
+      "version": "443.0",
+      "currentVersionReleaseDate": "2026-10-19T00:02:18Z",
+      "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/59/47/5d/59475db0-a6e5-76f9-214e-82311c3fb04d/SuperG_ios26-0-0-1x_U007epad-0-0-0-1-0-0-sRGB-0-0-0-85-220.png/512x512bb.jpg"
     },
     "X": {
       "trackId": 333903271,
