@@ -1,0 +1,52 @@
+{
+  "source": "Apple iTunes Lookup API",
+  "country": "us",
+  "synced_at": "2026-10-27T12:20:09.405053+00:00",
+  "apps": {
+    "Muse": {
+      "trackId": 6760173601,
+      "trackName": "Muse from Meta",
+      "sellerName": "Meta Platforms, Inc.",
+      "bundleId": "com.facebook.hatch",
+      "trackViewUrl": "https://apps.apple.com/us/app/muse-from-meta/id6760173601?uo=4",
+      "version": "13.1",
+      "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ed/dd/8e/eddd8e47-3746-3872-91e0-e009f15d1354/HatchAppIconPublic-0-0-1x_U007epad-0-1-0-sRGB-0-85-220.png/512x512bb.jpg"
+    },
+    "Manus": {
+      "trackId": 6740909540,
+      "trackName": "Manus - AI Agent & Automation",
+      "sellerName": "BUTTERFLY EFFECT PTE. LTD.",
+      "bundleId": "tech.butterfly.app",
+      "trackViewUrl": "https://apps.apple.com/us/app/manus-ai-agent-automation/id6740909540?uo=4",
+      "version": "26.19.3",
+      "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/20/a8/ba/20a8ba67-99d9-1a19-ef09-abc47d3914f7/IconManus-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg"
+    },
+    "Grok": {
+      "trackId": 6670324846,
+      "trackName": "Grok AI",
+      "sellerName": "X Corp.",
+      "bundleId": "ai.x.GrokApp",
+      "trackViewUrl": "https://apps.apple.com/us/app/grok-ai/id6670324846?uo=4",
+      "version": "1.4.59",
+      "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/95/ab/e5/95abe584-d6a4-96b0-94f4-cbfd1e77240e/AppIcon-0-0-1x_U007epad-0-0-0-1-0-0-0-85-220.png/512x512bb.jpg"
+    },
+    "Cue": {
+      "trackId": 6808613358,
+      "trackName": "Cue by Manus",
+      "sellerName": "BUTTERFLY EFFECT PTE. LTD.",
+      "bundleId": "ai.manus.agents",
+      "trackViewUrl": "https://apps.apple.com/us/app/cue-by-manus/id6808613358?uo=4",
+      "version": "26.18.5",
+      "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/64/d6/13/64d613db-bfa7-3a13-a3ce-290420071bf4/IconManusAgents-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg"
+    },
+    "GrokBot": {
+      "trackId": 6794501026,
+      "trackName": "Grok Bot",
+      "sellerName": "X Corp.",
+      "bundleId": "co.anysphere.sand",
+      "trackViewUrl": "https://apps.apple.com/us/app/grok-bot/id6794501026?uo=4",
+      "version": "1.18.0",
+      "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/76/46/d6/7646d666-4a32-77fc-62fc-db37eb78efe8/app-0-0-1x_U007epad-0-0-0-1-0-0-85-220.png/512x512bb.jpg"
+    }
+  }
+}

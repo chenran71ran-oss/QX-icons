@@ -8,6 +8,7 @@ on:
     paths:
       - ".github/workflows/sync-icons.yml"
       - "scripts/generate-vps-icons.py"
+      - "scripts/sync-ai-icons.py"
 
 permissions:
   contents: write
@@ -23,6 +24,9 @@ jobs:
 
       - name: Generate RackNerd and RackSmart icons
         run: python scripts/generate-vps-icons.py
+
+      - name: Sync Muse, Manus, Grok and official agent app icons
+        run: python scripts/sync-ai-icons.py
 
       - name: Fetch latest official App Store artwork and utility icons
         run: |
