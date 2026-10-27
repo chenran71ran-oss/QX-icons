@@ -58,6 +58,9 @@ def main():
         print(f'Synced {name}: Clash PNG 512px / QX circular RGBA 108px')
     (app_dir / 'ai-appstore-meta.json').write_text(
         json.dumps(metadata, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+    # Keep the sharper official SVG-derived Muse assets after artwork refresh.
+    from runpy import run_path
+    run_path(str(ROOT/'scripts/render-muse-icon.py'), run_name='__main__')
 
 
 if __name__ == '__main__':

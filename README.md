@@ -71,14 +71,14 @@ static=ChatGPT, DMIT-美国-自动, RN｜联通优化, DIRECT, img-url=https://r
 
 | App | QX 圆形 PNG（108px） | Clash PNG（512px） |
 |---|---|---|
-| Muse from Meta | [Muse-circle-v2.png](icons/qx/apps/Muse-circle-v2.png) | [Muse.png](icons/apps/Muse.png) |
+| Muse from Meta | [Muse-circle-v3.png](icons/qx/apps/Muse-circle-v3.png) | [Muse.png](icons/apps/Muse.png) |
 | Manus | [Manus-circle-v2.png](icons/qx/apps/Manus-circle-v2.png) | [Manus.png](icons/apps/Manus.png) |
 | Grok | [Grok-circle-v2.png](icons/qx/apps/Grok-circle-v2.png) | [Grok.png](icons/apps/Grok.png) |
 | Cue by Manus | [Cue-circle-v2.png](icons/qx/apps/Cue-circle-v2.png) | [Cue.png](icons/apps/Cue.png) |
 | Grok Bot | [GrokBot-circle-v2.png](icons/qx/apps/GrokBot-circle-v2.png) | [GrokBot.png](icons/apps/GrokBot.png) |
 
 RAW 前缀：`https://raw.githubusercontent.com/chenran71ran-oss/QX-icons/main/`。
-这批图标由 `scripts/sync-ai-icons.py` 随周任务刷新；没有修改既有 ChatGPT、Claude 或其他图标。
+这批图标由 `scripts/sync-ai-icons.py` 随周任务刷新。Muse 展示版从官网 SVG 矢量源直接导出，去掉 App Store 玻璃边框和阴影，以新版 `circle-v3` 路径刷新 QX 缓存；保留旧别名。没有修改既有 ChatGPT、Claude 或其他图标。
 分流域名调查见 [AI App / Bot 核对记录](docs/ai-routing-audit-2026-10-27.md)，不包含私人订阅或用户配置。
 
 | App | 预览 | RAW |

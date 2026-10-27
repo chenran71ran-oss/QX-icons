@@ -9,6 +9,8 @@ on:
       - ".github/workflows/sync-icons.yml"
       - "scripts/generate-vps-icons.py"
       - "scripts/sync-ai-icons.py"
+      - "scripts/render-muse-icon.py"
+      - "icons/sources/Muse-official.svg"
 
 permissions:
   contents: write
@@ -20,7 +22,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Install Pillow
-        run: python -m pip install --quiet pillow
+        run: python -m pip install --quiet pillow cairosvg
 
       - name: Generate RackNerd and RackSmart icons
         run: python scripts/generate-vps-icons.py
