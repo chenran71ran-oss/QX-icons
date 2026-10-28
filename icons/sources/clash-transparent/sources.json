@@ -1,0 +1,31 @@
+{
+  "repository": "https://github.com/lobehub/lobe-icons",
+  "commit": "8b7bbc433d38437fa2b0cca58ae896917162b812",
+  "license": "MIT",
+  "icons": {
+    "ChatGPT": {
+      "url": "https://raw.githubusercontent.com/lobehub/lobe-icons/8b7bbc433d38437fa2b0cca58ae896917162b812/packages/static-svg/icons/openai.svg",
+      "file": "icons/sources/clash-transparent/ChatGPT.svg"
+    },
+    "Claude": {
+      "url": "https://raw.githubusercontent.com/lobehub/lobe-icons/8b7bbc433d38437fa2b0cca58ae896917162b812/packages/static-svg/icons/claude-color.svg",
+      "file": "icons/sources/clash-transparent/Claude.svg"
+    },
+    "Gemini": {
+      "url": "https://raw.githubusercontent.com/lobehub/lobe-icons/8b7bbc433d38437fa2b0cca58ae896917162b812/packages/static-svg/icons/gemini-color.svg",
+      "file": "icons/sources/clash-transparent/Gemini.svg"
+    },
+    "Manus": {
+      "url": "https://raw.githubusercontent.com/lobehub/lobe-icons/8b7bbc433d38437fa2b0cca58ae896917162b812/packages/static-svg/icons/manus.svg",
+      "file": "icons/sources/clash-transparent/Manus.svg"
+    },
+    "Grok": {
+      "url": "https://raw.githubusercontent.com/lobehub/lobe-icons/8b7bbc433d38437fa2b0cca58ae896917162b812/packages/static-svg/icons/grok.svg",
+      "file": "icons/sources/clash-transparent/Grok.svg"
+    },
+    "Google": {
+      "url": "https://raw.githubusercontent.com/lobehub/lobe-icons/8b7bbc433d38437fa2b0cca58ae896917162b812/packages/static-svg/icons/google-color.svg",
+      "file": "icons/sources/clash-transparent/Google.svg"
+    }
+  }
+}

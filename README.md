@@ -94,6 +94,22 @@ RAW 前缀：`https://raw.githubusercontent.com/chenran71ran-oss/QX-icons/main/`
 | Telegram | <img src="./icons/qx/apps/Telegram-circle-v2.png" width="42"> | `icons/qx/apps/Telegram-circle-v2.png` |
 | Instagram | <img src="./icons/qx/apps/Instagram-circle-v2.png" width="42"> | `icons/qx/apps/Instagram-circle-v2.png` |
 
+### Clash AI 透明标志
+
+Clash 的 AI 组可使用 `icons/clash/apps/<Name>-transparent-v1.png`：
+`ChatGPT`、`Claude`、`Gemini`、`Muse`、`Manus`、`Grok`、`Google`。
+这些文件为 512×512 RGBA PNG，没有白色方块、圆形底板或 App Store 外框。
+Manus、Grok 默认采用适合深色面板的浅色标志，浅色面板可改用
+`icons/clash/apps/light/` 下的同名文件。彩色标志在两种背景均可使用。
+
+Muse 使用官网 SVG，其余标志来自 MIT 授权的 [Lobe Icons](https://github.com/lobehub/lobe-icons)；
+固定版本、来源和许可证位于 `icons/sources/clash-transparent/`。
+周任务从已保存矢量源重新导出。QX 圆形版本与其他 App 图标保持独立。
+
+```yaml
+icon: https://raw.githubusercontent.com/chenran71ran-oss/QX-icons/main/icons/clash/apps/Muse-transparent-v1.png
+```
+
 ### 2. 节点资源 / 订阅 `[server_remote]`
 
 QX 的 PROXY / 节点资源区域会把图标按**模板 / mask**方式渲染，因此不适合直接放彩色 App 风格图标。

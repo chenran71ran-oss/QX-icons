@@ -10,6 +10,8 @@ on:
       - "scripts/generate-vps-icons.py"
       - "scripts/sync-ai-icons.py"
       - "scripts/render-muse-icon.py"
+      - "scripts/generate-clash-transparent-icons.py"
+      - "icons/sources/clash-transparent/**"
       - "icons/sources/Muse-official.svg"
 
 permissions:
@@ -302,11 +304,14 @@ jobs:
           )
           PY
 
+      - name: Generate transparent Clash AI brand marks
+        run: python scripts/generate-clash-transparent-icons.py
+
       - name: Commit refreshed icons
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add icons/apps icons/utility icons/subscriptions icons/qx
+          git add icons/apps icons/utility icons/subscriptions icons/qx icons/clash
           if git diff --cached --quiet; then
             echo "No icon changes."
           else
