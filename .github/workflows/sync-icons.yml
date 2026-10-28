@@ -304,7 +304,7 @@ jobs:
           )
           PY
 
-      - name: Generate transparent Clash AI brand marks
+      - name: Generate transparent Clash app brand marks
         run: python scripts/generate-clash-transparent-icons.py
 
       - name: Commit refreshed icons

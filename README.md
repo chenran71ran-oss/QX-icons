@@ -94,20 +94,27 @@ RAW 前缀：`https://raw.githubusercontent.com/chenran71ran-oss/QX-icons/main/`
 | Telegram | <img src="./icons/qx/apps/Telegram-circle-v2.png" width="42"> | `icons/qx/apps/Telegram-circle-v2.png` |
 | Instagram | <img src="./icons/qx/apps/Instagram-circle-v2.png" width="42"> | `icons/qx/apps/Instagram-circle-v2.png` |
 
-### Clash AI 透明标志
+### Clash 透明标志
 
-Clash 的 AI 组可使用 `icons/clash/apps/<Name>-transparent-v1.png`：
-`ChatGPT`、`Claude`、`Gemini`、`Muse`、`Manus`、`Grok`、`Google`。
-这些文件为 512×512 RGBA PNG，没有白色方块、圆形底板或 App Store 外框。
-Manus、Grok 默认采用适合深色面板的浅色标志，浅色面板可改用
-`icons/clash/apps/light/` 下的同名文件。彩色标志在两种背景均可使用。
+Clash 使用 `icons/clash/apps/<Name>-transparent-v1.png`：
+- AI：Claude、Gemini、Muse、Manus、Grok、Google。
+- App：Emby、Speedtest、Spotify、X、Telegram、Instagram、GitHub、TikTok、Reddit、Netflix。
+- ChatGPT 推荐 `ChatGPT-transparent-v2.png`：已恢复浅白色，v1 同步修正。
 
-Muse 使用官网 SVG，其余标志来自 MIT 授权的 [Lobe Icons](https://github.com/lobehub/lobe-icons)；
-固定版本、来源和许可证位于 `icons/sources/clash-transparent/`。
-周任务从已保存矢量源重新导出。QX 圆形版本与其他 App 图标保持独立。
+全部为 512×512 RGBA PNG，无额外圆形底板、白色方块或 App Store 外框。
+Spotify 等品牌标志本身的圆形轮廓仍是标志的一部分，内部留空为透明。
+ChatGPT、Manus、Grok、GitHub、X、Speedtest 与 TikTok 默认适配深色面板；
+浅色面板可使用 `icons/clash/apps/light/` 下的对应文件。
+
+Muse 使用官网 SVG；其余 AI 标志来自 [Lobe Icons](https://github.com/lobehub/lobe-icons)（MIT）；
+App 标志来自 [Simple Icons](https://github.com/simple-icons/simple-icons)（CC0）和
+[SVGL](https://github.com/pheralb/svgl)（MIT）。来源版本及许可证保存在
+`icons/sources/clash-transparent/`；Instagram 的渐变仅绘制在标志轮廓内。
+周任务从已保存的矢量源重建，QX 圆形版本不受影响。
+加密货币等通用功能图标及服务器图标保持现有设计。
 
 ```yaml
-icon: https://raw.githubusercontent.com/chenran71ran-oss/QX-icons/main/icons/clash/apps/Muse-transparent-v1.png
+icon: https://raw.githubusercontent.com/chenran71ran-oss/QX-icons/main/icons/clash/apps/ChatGPT-transparent-v2.png
 ```
 
 ### 2. 节点资源 / 订阅 `[server_remote]`

@@ -1,0 +1,89 @@
+{
+  "description": "Transparent app glyphs; QX artwork stays independent. Instagram uses its multicolor gradient on the glyph only. Brand-integral silhouettes (e.g. Spotify circle) are retained; no additional tile is rendered.",
+  "icons": {
+    "Emby": {
+      "repository": "https://github.com/simple-icons/simple-icons",
+      "commit": "90646e4bf7f3b89df6c37e65baf3e7bc759a517c",
+      "url": "https://raw.githubusercontent.com/simple-icons/simple-icons/90646e4bf7f3b89df6c37e65baf3e7bc759a517c/icons/emby.svg",
+      "license": "CC0-1.0",
+      "file": "icons/sources/clash-transparent/Emby.svg",
+      "color": "#52B54B"
+    },
+    "Speedtest": {
+      "repository": "https://github.com/simple-icons/simple-icons",
+      "commit": "90646e4bf7f3b89df6c37e65baf3e7bc759a517c",
+      "url": "https://raw.githubusercontent.com/simple-icons/simple-icons/90646e4bf7f3b89df6c37e65baf3e7bc759a517c/icons/speedtest.svg",
+      "license": "CC0-1.0",
+      "file": "icons/sources/clash-transparent/Speedtest.svg",
+      "color": "#F3F4F6",
+      "light_color": "#333333"
+    },
+    "Spotify": {
+      "repository": "https://github.com/simple-icons/simple-icons",
+      "commit": "90646e4bf7f3b89df6c37e65baf3e7bc759a517c",
+      "url": "https://raw.githubusercontent.com/simple-icons/simple-icons/90646e4bf7f3b89df6c37e65baf3e7bc759a517c/icons/spotify.svg",
+      "license": "CC0-1.0",
+      "file": "icons/sources/clash-transparent/Spotify.svg",
+      "color": "#1ED760"
+    },
+    "X": {
+      "repository": "https://github.com/simple-icons/simple-icons",
+      "commit": "90646e4bf7f3b89df6c37e65baf3e7bc759a517c",
+      "url": "https://raw.githubusercontent.com/simple-icons/simple-icons/90646e4bf7f3b89df6c37e65baf3e7bc759a517c/icons/x.svg",
+      "license": "CC0-1.0",
+      "file": "icons/sources/clash-transparent/X.svg",
+      "color": "#F3F4F6",
+      "light_color": "#333333"
+    },
+    "Telegram": {
+      "repository": "https://github.com/simple-icons/simple-icons",
+      "commit": "90646e4bf7f3b89df6c37e65baf3e7bc759a517c",
+      "url": "https://raw.githubusercontent.com/simple-icons/simple-icons/90646e4bf7f3b89df6c37e65baf3e7bc759a517c/icons/telegram.svg",
+      "license": "CC0-1.0",
+      "file": "icons/sources/clash-transparent/Telegram.svg",
+      "color": "#26A5E4"
+    },
+    "Instagram": {
+      "repository": "https://github.com/simple-icons/simple-icons",
+      "commit": "90646e4bf7f3b89df6c37e65baf3e7bc759a517c",
+      "url": "https://raw.githubusercontent.com/simple-icons/simple-icons/90646e4bf7f3b89df6c37e65baf3e7bc759a517c/icons/instagram.svg",
+      "license": "CC0-1.0",
+      "file": "icons/sources/clash-transparent/Instagram.svg",
+      "color": "#E4405F"
+    },
+    "GitHub": {
+      "repository": "https://github.com/simple-icons/simple-icons",
+      "commit": "90646e4bf7f3b89df6c37e65baf3e7bc759a517c",
+      "url": "https://raw.githubusercontent.com/simple-icons/simple-icons/90646e4bf7f3b89df6c37e65baf3e7bc759a517c/icons/github.svg",
+      "license": "CC0-1.0",
+      "file": "icons/sources/clash-transparent/GitHub.svg",
+      "color": "#F3F4F6",
+      "light_color": "#333333"
+    },
+    "Reddit": {
+      "repository": "https://github.com/simple-icons/simple-icons",
+      "commit": "90646e4bf7f3b89df6c37e65baf3e7bc759a517c",
+      "url": "https://raw.githubusercontent.com/simple-icons/simple-icons/90646e4bf7f3b89df6c37e65baf3e7bc759a517c/icons/reddit.svg",
+      "license": "CC0-1.0",
+      "file": "icons/sources/clash-transparent/Reddit.svg",
+      "color": "#FF4500"
+    },
+    "Netflix": {
+      "repository": "https://github.com/simple-icons/simple-icons",
+      "commit": "90646e4bf7f3b89df6c37e65baf3e7bc759a517c",
+      "url": "https://raw.githubusercontent.com/simple-icons/simple-icons/90646e4bf7f3b89df6c37e65baf3e7bc759a517c/icons/netflix.svg",
+      "license": "CC0-1.0",
+      "file": "icons/sources/clash-transparent/Netflix.svg",
+      "color": "#E50914"
+    },
+    "TikTok": {
+      "repository": "https://github.com/pheralb/svgl",
+      "commit": "88467c074c30c64ece8418ecda010c7dce404419",
+      "url": "https://raw.githubusercontent.com/pheralb/svgl/88467c074c30c64ece8418ecda010c7dce404419/static/library/tiktok-icon-light.svg",
+      "license": "MIT",
+      "file": "icons/sources/clash-transparent/TikTok.svg",
+      "color": "#F3F4F6",
+      "light_color": "#111111"
+    }
+  }
+}
