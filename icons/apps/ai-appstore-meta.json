@@ -1,7 +1,7 @@
 {
   "source": "Apple iTunes Lookup API",
   "country": "us",
-  "synced_at": "2026-11-09T11:40:26.324987+00:00",
+  "synced_at": "2026-11-12T12:47:16.855000+00:00",
   "apps": {
     "Muse": {
       "trackId": 6760173601,
@@ -9,8 +9,8 @@
       "sellerName": "Meta Platforms, Inc.",
       "bundleId": "com.facebook.hatch",
       "trackViewUrl": "https://apps.apple.com/us/app/muse-from-meta/id6760173601?uo=4",
-      "version": "14.4",
-      "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/68/84/f5/6884f563-4eb3-991c-d903-3f345f8a4f0c/HatchAppIconPublic-0-0-1x_U007epad-0-1-0-sRGB-0-85-220.png/512x512bb.jpg"
+      "version": "15.1",
+      "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/1f/d3/ad/1fd3adf4-c8d4-6563-16de-8144670ac382/HatchAppIconPublic-0-0-1x_U007epad-0-1-0-sRGB-0-85-220.png/512x512bb.jpg"
     },
     "Manus": {
       "trackId": 6740909540,
@@ -27,8 +27,8 @@
       "sellerName": "X Corp.",
       "bundleId": "ai.x.GrokApp",
       "trackViewUrl": "https://apps.apple.com/us/app/grok/id6670324846?uo=4",
-      "version": "1.4.62",
-      "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/36/93/b1/3693b1d3-13e4-3a21-490f-e7b8d529bcca/AppIcon-0-0-1x_U007epad-0-0-0-1-0-0-0-85-220.png/512x512bb.jpg"
+      "version": "1.4.64",
+      "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/b8/41/58/b8415899-4484-f49f-fe4c-d4eef17ab384/AppIcon-0-0-1x_U007epad-0-0-0-1-0-0-0-85-220.png/512x512bb.jpg"
     },
     "Cue": {
       "trackId": 6808613358,
@@ -45,8 +45,8 @@
       "sellerName": "X Corp.",
       "bundleId": "co.anysphere.sand",
       "trackViewUrl": "https://apps.apple.com/us/app/grok-bot/id6794501026?uo=4",
-      "version": "1.24.1",
-      "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/19/b5/df/19b5df74-baf6-120d-40cf-7deb33202e21/app-0-0-1x_U007epad-0-0-0-1-0-0-0-85-220.png/512x512bb.jpg"
+      "version": "1.25.0",
+      "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/af/47/cb/af47cb36-8d96-e629-3781-65f5e5f051a1/app-0-0-1x_U007epad-0-0-0-1-0-0-0-85-220.png/512x512bb.jpg"
     }
   }
 }
