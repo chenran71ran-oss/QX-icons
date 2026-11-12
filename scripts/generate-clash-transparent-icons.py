@@ -57,6 +57,12 @@ def main():
                 text = text.replace('fill="'+fill+'"', 'fill="'+spec['light_color']+'"', 1)
                 export(text).save(DEST/'light'/(name+'-transparent-v1.png'), optimize=True)
 
+    # Verge caches by group name and filename, so light/dark variants need distinct basenames.
+    for name in ['ChatGPT', 'Manus', 'Grok', 'GitHub', 'X', 'Speedtest', 'TikTok']:
+        version = 'v2' if name == 'ChatGPT' else 'v1'
+        source = DEST/'light'/(name+'-transparent-'+version+'.png')
+        (DEST/(name+'-light-v3.png')).write_bytes(source.read_bytes())
+
 
 if __name__ == '__main__':
     main()

@@ -104,7 +104,9 @@ Clash 使用 `icons/clash/apps/<Name>-transparent-v1.png`：
 全部为 512×512 RGBA PNG，无额外圆形底板、白色方块或 App Store 外框。
 Spotify 等品牌标志本身的圆形轮廓仍是标志的一部分，内部留空为透明。
 ChatGPT、Manus、Grok、GitHub、X、Speedtest 与 TikTok 默认适配深色面板；
-浅色面板可使用 `icons/clash/apps/light/` 下的对应文件。
+浅色面板推荐使用 `icons/clash/apps/<Name>-light-v3.png`，覆盖 ChatGPT、Manus、Grok、GitHub、X、Speedtest、TikTok。
+这些文件只有背景透明，标志主体为深色（TikTok 保留青红配色）。旧 `light/` 路径继续保留。
+Clash Verge 按组名与文件名缓存图标；浅色与深色文件必须使用不同文件名，仅更换目录可能继续显示旧图。
 
 Muse 使用官网 SVG；其余 AI 标志来自 [Lobe Icons](https://github.com/lobehub/lobe-icons)（MIT）；
 App 标志来自 [Simple Icons](https://github.com/simple-icons/simple-icons)（CC0）和
