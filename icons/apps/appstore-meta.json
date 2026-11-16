@@ -1,7 +1,7 @@
 {
   "source": "Apple iTunes Lookup API",
   "country": "us",
-  "synced_at": "2026-11-12T12:47:19.545100+00:00",
+  "synced_at": "2026-11-16T11:31:24.826087+00:00",
   "apps": {
     "ChatGPT": {
       "trackId": 6448311069,
@@ -15,17 +15,17 @@
       "trackId": 6473753684,
       "trackName": "Claude by Anthropic",
       "sellerName": "Anthropic PBC",
-      "version": "1.261109.19",
-      "currentVersionReleaseDate": "2026-11-10T13:52:49Z",
-      "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f8/a0/eb/f8a0eba3-be3c-7cbb-214b-f138d28f45d5/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg"
+      "version": "1.261113.19",
+      "currentVersionReleaseDate": "2026-11-14T09:52:08Z",
+      "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/f7/78/19/f778197d-06fe-8143-0e86-49a1dccec2b4/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg"
     },
     "Gemini": {
       "trackId": 6477489729,
       "trackName": "Google Gemini",
       "sellerName": "Google LLC",
-      "version": "1.2026.4370401",
-      "currentVersionReleaseDate": "2026-11-04T10:30:30Z",
-      "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c3/96/f2/c396f2cb-1981-3845-5b59-7cffb0565921/AppIcon-0-0-1x_U007epad-0-0-0-1-0-0-0-0-85-220.png/512x512bb.jpg"
+      "version": "1.2026.4470202",
+      "currentVersionReleaseDate": "2026-11-12T09:38:17Z",
+      "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/e0/b0/e6/e0b0e606-4e2a-537c-2d94-64db64e40396/AppIcon-0-0-1x_U007epad-0-0-0-1-0-0-0-0-85-220.png/512x512bb.jpg"
     },
     "Google": {
       "trackId": 284815942,
@@ -39,9 +39,9 @@
       "trackId": 333903271,
       "trackName": "X",
       "sellerName": "X Corp.",
-      "version": "12.43",
-      "currentVersionReleaseDate": "2026-11-11T16:32:53Z",
-      "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/70/88/88/708888e7-81a4-8a4a-52d7-9a901a1725ff/ProductionAppIcon-0-0-1x_U007emarketing-0-8-0-0-0-85-220.png/512x512bb.jpg"
+      "version": "12.44",
+      "currentVersionReleaseDate": "2026-11-14T20:19:39Z",
+      "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/8c/34/3c/8c343cb1-af3c-28ec-19be-f5ebb0e4d385/ProductionAppIcon-0-0-1x_U007emarketing-0-8-0-0-0-85-220.png/512x512bb.jpg"
     },
     "Telegram": {
       "trackId": 686449807,
@@ -63,17 +63,17 @@
       "trackId": 1064216828,
       "trackName": "Reddit",
       "sellerName": "REDDIT, INC.",
-      "version": "2026.45.0",
-      "currentVersionReleaseDate": "2026-11-09T21:24:19Z",
-      "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/72/51/50/7251507a-76e3-49d4-aacb-266516757cfe/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg"
+      "version": "2026.45.1",
+      "currentVersionReleaseDate": "2026-11-11T14:38:32Z",
+      "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/d8/9c/e2/d89ce234-6d2e-58b4-58fd-daffc5032da3/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg"
     },
     "GitHub": {
       "trackId": 1477376905,
       "trackName": "GitHub",
       "sellerName": "GitHub",
-      "version": "1.283.0",
-      "currentVersionReleaseDate": "2026-11-05T14:25:25Z",
-      "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/55/bd/13/55bd133e-c249-2c58-5473-ffccbfa0ebb7/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg"
+      "version": "1.284.0",
+      "currentVersionReleaseDate": "2026-11-12T17:08:48Z",
+      "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/92/cd/88/92cd8826-475d-2cd3-309d-ca1b8b07592d/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg"
     },
     "TikTok": {
       "trackId": 835599320,
@@ -111,9 +111,9 @@
       "trackId": 324684580,
       "trackName": "Spotify: Music and Podcasts",
       "sellerName": "Spotify",
-      "version": "9.1.98",
-      "currentVersionReleaseDate": "2026-11-09T18:28:38Z",
-      "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/d5/ca/fa/d5cafa8a-079b-f708-4704-6cc55a8fb160/AppIcon-0-0-1x_U007epad-0-1-0-0-85-220.png/512x512bb.jpg"
+      "version": "9.2.0",
+      "currentVersionReleaseDate": "2026-11-13T13:54:31Z",
+      "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/e9/1f/74/e91f74f7-5d7a-8b48-94ce-ede900d61bff/AppIcon-0-0-1x_U007epad-0-1-0-0-85-220.png/512x512bb.jpg"
     },
     "Netflix": {
       "trackId": 363590051,

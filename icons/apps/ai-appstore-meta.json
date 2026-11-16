@@ -1,7 +1,7 @@
 {
   "source": "Apple iTunes Lookup API",
   "country": "us",
-  "synced_at": "2026-11-12T12:47:16.855000+00:00",
+  "synced_at": "2026-11-16T11:31:22.316925+00:00",
   "apps": {
     "Muse": {
       "trackId": 6760173601,
@@ -9,8 +9,8 @@
       "sellerName": "Meta Platforms, Inc.",
       "bundleId": "com.facebook.hatch",
       "trackViewUrl": "https://apps.apple.com/us/app/muse-from-meta/id6760173601?uo=4",
-      "version": "15.1",
-      "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/1f/d3/ad/1fd3adf4-c8d4-6563-16de-8144670ac382/HatchAppIconPublic-0-0-1x_U007epad-0-1-0-sRGB-0-85-220.png/512x512bb.jpg"
+      "version": "16.0",
+      "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/91/b8/2c/91b82cd3-b8aa-fa17-4641-77bc4fb0b132/HatchAppIconPublic-0-0-1x_U007epad-0-1-0-sRGB-0-85-220.png/512x512bb.jpg"
     },
     "Manus": {
       "trackId": 6740909540,
@@ -18,8 +18,8 @@
       "sellerName": "BUTTERFLY EFFECT PTE. LTD.",
       "bundleId": "tech.butterfly.app",
       "trackViewUrl": "https://apps.apple.com/us/app/manus-ai-agent-automation/id6740909540?uo=4",
-      "version": "26.19.11",
-      "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/22/cc/75/22cc75fc-3173-432d-e11f-dc69532d4ddb/IconManus-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg"
+      "version": "26.19.13",
+      "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/fa/98/ad/fa98add6-e466-e724-929f-b4e883214022/IconManus-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg"
     },
     "Grok": {
       "trackId": 6670324846,
@@ -27,8 +27,8 @@
       "sellerName": "X Corp.",
       "bundleId": "ai.x.GrokApp",
       "trackViewUrl": "https://apps.apple.com/us/app/grok/id6670324846?uo=4",
-      "version": "1.4.64",
-      "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/b8/41/58/b8415899-4484-f49f-fe4c-d4eef17ab384/AppIcon-0-0-1x_U007epad-0-0-0-1-0-0-0-85-220.png/512x512bb.jpg"
+      "version": "1.4.65",
+      "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/f7/3a/cd/f73acd43-b2dc-eb55-d794-8b87869ef160/AppIcon-0-0-1x_U007epad-0-0-0-1-0-0-0-85-220.png/512x512bb.jpg"
     },
     "Cue": {
       "trackId": 6808613358,
@@ -36,8 +36,8 @@
       "sellerName": "BUTTERFLY EFFECT PTE. LTD.",
       "bundleId": "ai.manus.agents",
       "trackViewUrl": "https://apps.apple.com/us/app/cue-by-manus/id6808613358?uo=4",
-      "version": "26.18.14",
-      "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/0e/b1/a2/0eb1a2ee-b230-b645-ebfe-e68bceaeb994/IconManusAgents-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg"
+      "version": "26.18.15",
+      "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c4/3a/28/c43a2818-a22e-6916-5470-b8334974c9f6/IconManusAgents-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg"
     },
     "GrokBot": {
       "trackId": 6794501026,
@@ -45,8 +45,8 @@
       "sellerName": "X Corp.",
       "bundleId": "co.anysphere.sand",
       "trackViewUrl": "https://apps.apple.com/us/app/grok-bot/id6794501026?uo=4",
-      "version": "1.25.0",
-      "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/af/47/cb/af47cb36-8d96-e629-3781-65f5e5f051a1/app-0-0-1x_U007epad-0-0-0-1-0-0-0-85-220.png/512x512bb.jpg"
+      "version": "1.26.0",
+      "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/d9/24/5e/d9245e90-112e-2774-bf66-a29363a9acdd/app-0-0-1x_U007epad-0-0-0-1-0-0-0-85-220.png/512x512bb.jpg"
     }
   }
 }
